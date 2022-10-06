@@ -39,10 +39,10 @@
 }
 
 .product {
-  background-color: lightcoral;
+  background-color: lightslategrey;
   color: white;
   padding: 20px;
-  margin: 10px;
+  margin: 20px;
   border-radius: 20px;
-  border: 6px solid maroon;
+  border: 5px solid maroon;
 }

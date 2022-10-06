@@ -9,6 +9,7 @@ const productstyle = {
   borderRadius: '15px'
 
 }
+
 function App() {
   const Aircrafts = [
     { name: "Su-35", price: "1000", color: "cemoFlag", origin: "Russia" },
