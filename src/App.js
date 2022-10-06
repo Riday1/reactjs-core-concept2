@@ -22,7 +22,7 @@ function App() {
     <div className="App">
 
       {
-        Aircrafts.map(aricraft => <Product name={Aircrafts.name} price={Aircrafts.price} color={Aircrafts.color}></Product>)
+        Aircrafts.map(aricraft => <Product name={aricraft.name} price={aricraft.price} color={aricraft.color} origin={aricraft.origin}></Product>)
       }
 
     </div>
@@ -39,7 +39,7 @@ function Product(props) {
       <h1>Product Name : {props.name} </h1>
       <h3>Product Price : {props.price}</h3>
       <h3>Product color : {props.color}</h3>
-      <p>Origin : { }</p>
+      <p>Origin : {props.origin}</p>
 
     </div >
   )
