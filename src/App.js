@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
 
-
+      <Product></Product>
 
     </div>
   );
@@ -22,10 +22,14 @@ function App() {
 
 
 
-function Product(props) {
+function Product() {
   return (
 
-    
+    <div>
+      <h3>Product Name : Su - 35</h3>
+      <p>Product Price : 20000</p>
+    </div>
+  )
 }
 
 export default App;
