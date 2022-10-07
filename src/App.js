@@ -11,20 +11,21 @@ const productstyle = {
 }
 
 function App() {
-  const Aircrafts = [
-    { name: "Su-35", price: "1000", color: "cemoFlag", origin: "Russia" },
-    { name: "Rafale", price: "2000", color: "gray", origin: "Franch" },
-    { name: "Tyfun", price: "1500", color: "light gray", origin: "Eupore" },
-    { name: "Birakter Tb-2", price: "10", color: "skey blue", origin: "Tukiye" },
-    { name: "Mig-29", price: "1800", color: "comb. of blue and Dark blue", origin: "Russian" }
+  const products = [
+    { name: 'laptop', price: 20000, color: 'red' },
+    { name: 'iphone', price: 21000, color: 'gray' },
+    { name: 'washing machine', price: 30000, color: 'gray' },
+    { name: 'bed', price: 34000, color: 'chocolate' }
   ]
 
+  const productName = ['bed', 'chair', 'table', 'computer', 'mobile phone'];
   return (
     <div className="App">
 
       {
-        Aircrafts.map(aricraft => <Product name={aricraft.name} price={aricraft.price} color={aricraft.color} origin={aricraft.origin}></Product>)
+        products.map(product => <Product name={product.name} price={product.price} color={product.color}></Product>)
       }
+
 
     </div>
   );
@@ -33,16 +34,13 @@ function App() {
 
 
 function Product(props) {
-  // console.log(props)
+
   return (
-
     <div className='product'>
-      <h1>Product Name : {props.name} </h1>
-      <h3>Product Price : {props.price}</h3>
-      <h3>Product color : {props.color}</h3>
-      <p>Origin : {props.origin}</p>
-
-    </div >
+      <h2>Product Name : {props.name} </h2>
+      <h3>Price : {props.price}</h3>
+      <h3>Color : {props.color}</h3>
+    </div>
   )
 }
 
