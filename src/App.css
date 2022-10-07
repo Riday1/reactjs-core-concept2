@@ -46,3 +46,12 @@
   border-radius: 20px;
   border: 5px solid gray;
 }
+
+.person {
+  background-color: lightseagreen;
+  color: black;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 20px;
+  border: 5px solid gray;
+}

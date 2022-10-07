@@ -18,15 +18,16 @@ function App() {
     { name: 'bed', price: 34000, color: 'chocolate' }
   ]
 
-  const productName = ['bed', 'chair', 'table', 'computer', 'mobile phone'];
+  const persons = ['sabit', 'shorif', 'shishir']
   return (
     <div className="App">
-
       {
         products.map(product => <Product name={product.name} price={product.price} color={product.color}></Product>)
+
       }
-
-
+      {
+        persons.map(person => <Person name="Mr. bean"></Person>)
+      }
     </div>
   );
 }
@@ -34,12 +35,19 @@ function App() {
 
 
 function Product(props) {
-
   return (
     <div className='product'>
       <h2>Product Name : {props.name} </h2>
       <h3>Price : {props.price}</h3>
       <h3>Color : {props.color}</h3>
+    </div>
+  )
+}
+
+function Person(props) {
+  return (
+    <div className='person'>
+      <h3>Name: {props.name}</h3>
     </div>
   )
 }
