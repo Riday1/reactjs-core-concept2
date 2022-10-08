@@ -6,7 +6,6 @@ import { useEffect, useState } from 'react';
 
 
 function App() {
-
   return (
     <div className="App">
       {/* <Counter></Counter> */}
@@ -17,10 +16,29 @@ function App() {
 
 function ExternalUsers() {
   const [users, setUsers] = useState([]);
+  useEffect(() => {
+    fetch('https://jsonplaceholder.typicode.com/users')
+      .then(res => res.json())
+      .then(data => setUsers(data))
+  }, [])
+
   return (
     <div>
       <h2>External Users</h2>
+      <p>{users.length}</p>
+      {
+        users.map(user => <User name={user.name}></User>)
+      }
     </div>
+  )
+}
+
+
+function User(props) {
+  return (
+    <div>
+      <h3>Name : {props.name}</h3>
+    </div> 
   )
 }
 
