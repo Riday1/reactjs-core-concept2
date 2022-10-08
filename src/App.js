@@ -1,23 +1,42 @@
 import logo from './logo.svg';
 import './App.css';
+import { useEffect, useState } from 'react';
 
-const productstyle = {
-  backgroundColor: 'lightpink',
-  padding: '20px',
-  margin: '20px',
-  border: '4px solid maroon',
-  borderRadius: '15px'
 
-}
+
 
 function App() {
 
-
   return (
     <div className="App">
-      <Counter></Counter>
+      {/* <Counter></Counter> */}
+      <ExternalUsers></ExternalUsers>
     </div>
   );
+}
+
+function ExternalUsers() {
+  const [users, setUsers] = useState([]);
+  return (
+    <div>
+      <h2>External Users</h2>
+    </div>
+  )
+}
+
+
+
+function Counter() {
+  const [count, setCount] = useState(12);
+  const increaseCount = () => setCount(count + 1)
+  const decreaseCount = () => setCount(count - 1)
+  return (
+    <div>
+      <h1>Count: {count}</h1>
+      <button onClick={increaseCount}>Increase</button>
+      <button onClick={decreaseCount}>Decrease</button>
+    </div>
+  )
 }
 
 
@@ -60,12 +79,6 @@ function Person(props) {
   )
 }
 
-function Counter() {
-  return (
-    <div>
-      <h1>Count: </h1>
-    </div>
-  )
-}
+
 
 export default App;
